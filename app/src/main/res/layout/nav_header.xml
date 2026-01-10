@@ -28,7 +28,7 @@
         android:id="@+id/nav_header_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="user@hospital.com"
+        android:text="user@flightmanagement.com"
         android:textColor="@color/secondary"
         android:textSize="14sp" />
 
