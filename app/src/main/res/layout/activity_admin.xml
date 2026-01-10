@@ -134,7 +134,7 @@
                     android:rowCount="2"
                     android:layout_marginBottom="24dp">
 
-                    <!-- Total Patients Card -->
+                    <!-- Total Users Card -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="100dp"
@@ -152,7 +152,7 @@
                             android:padding="12dp">
 
                             <TextView
-                                android:id="@+id/total_patients"
+                                android:id="@+id/total_users"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -164,14 +164,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Patients"
+                                android:text="Total Users"
                                 android:textSize="14sp"
                                 android:fontFamily="@font/sofiasans"
                                 android:textColor="@color/white" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Total Doctors Card -->
+                    <!-- Total Bookings Card -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="100dp"
@@ -189,7 +189,7 @@
                             android:padding="12dp">
 
                             <TextView
-                                android:id="@+id/total_doctors"
+                                android:id="@+id/total_bookings"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -201,14 +201,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Doctors"
+                                android:text="Total Bookings"
                                 android:textSize="14sp"
                                 android:fontFamily="@font/sofiasans"
                                 android:textColor="@color/white" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Pending Requests Card -->
+                    <!-- Pending Bookings Card -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="100dp"
@@ -226,7 +226,7 @@
                             android:padding="12dp">
 
                             <TextView
-                                android:id="@+id/pending_requests"
+                                android:id="@+id/pending_bookings"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -245,7 +245,7 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Today's Appointments Card -->
+                    <!-- Completed Bookings Card -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="100dp"
@@ -263,7 +263,7 @@
                             android:padding="12dp">
 
                             <TextView
-                                android:id="@+id/today_appointments"
+                                android:id="@+id/completed_bookings"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -275,7 +275,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Today"
+                                android:text="Completed"
                                 android:textSize="14sp"
                                 android:fontFamily="@font/sofiasans"
                                 android:textColor="@android:color/white" />
@@ -284,7 +284,7 @@
 
                 </GridLayout>
 
-                <!-- Pending Requests Header -->
+                <!-- Recent Bookings Header -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -295,14 +295,14 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Pending Appointment Requests"
+                        android:text="Recent Bookings"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/sofiasans"
                         android:textColor="@color/secondary" />
 
                     <TextView
-                        android:id="@+id/view_all_requests"
+                        android:id="@+id/view_all_bookings"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="View All"
@@ -313,13 +313,13 @@
 
                 </LinearLayout>
 
-                <!-- Pending Requests List -->
+                <!-- Recent Bookings List -->
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/pending_requests_recyclerview"
+                    android:id="@+id/recent_bookings_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
-                    tools:listitem="@layout/item_appointment_request"
+                    tools:listitem="@layout/item_booking"
                     tools:itemCount="2" />
 
                 <!-- Empty State -->
@@ -343,7 +343,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No pending requests"
+                        android:text="No recent bookings"
                         android:textSize="16sp"
                         android:fontFamily="@font/sofiasans"
                         android:textColor="@color/secondary"

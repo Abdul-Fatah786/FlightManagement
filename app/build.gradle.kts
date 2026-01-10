@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.hospitalmanagement"
+    namespace = "com.example.flightmanagement"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.hospitalmanagement"
+        applicationId = "com.example.flightmanagement"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -51,6 +51,7 @@ dependencies {
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.tbuonomo:dotsindicator:5.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
     // Retrofit & Gson
     implementation("com.squareup.retrofit2:retrofit:2.11.0")

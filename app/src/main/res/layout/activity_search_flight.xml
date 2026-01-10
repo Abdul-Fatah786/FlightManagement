@@ -11,21 +11,25 @@
         android:id="@+id/originEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Origin" />
+        android:hint="Origin (Required)"
+        android:inputType="textCapCharacters" />
 
     <EditText
         android:id="@+id/destinationEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Destination" />
+        android:hint="Destination (Required)"
+        android:inputType="textCapCharacters" />
 
     <EditText
         android:id="@+id/departureDateEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Departure Date (YYYY-MM-DD)" />
+        android:hint="Departure Date (Optional - Tap to select)"
+        android:focusable="false"
+        android:clickable="true" />
 
     <Button
         android:id="@+id/searchButton"

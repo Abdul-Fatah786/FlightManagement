@@ -44,14 +44,14 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#DDDDDD"
-            android:layout_marginVertical="8dp" />
+            android.layout_marginVertical="8dp"
+            android:background="#DDDDDD" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -77,9 +77,9 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_flight"
                 android:layout_marginHorizontal="16dp"
-                app:tint="@color/primary" />
+                android:src="@drawable/ic_flight"
+                android:tint="#2196F3" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -107,8 +107,8 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#DDDDDD"
-            android:layout_marginVertical="8dp" />
+            android:layout_marginVertical="8dp"
+            android:background="#DDDDDD" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -118,9 +118,9 @@
                 android:id="@+id/available_seats"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text="45 seats available"
-                android:textColor="#4CAF50"
-                android:layout_centerVertical="true" />
+                android:textColor="#4CAF50" />
 
             <TextView
                 android:id="@+id/price"
@@ -128,10 +128,17 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="$299.00"
+                android:textColor="@color/primary"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/primary" />
+                android:textStyle="bold" />
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/book_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Book" />
 
     </LinearLayout>
 

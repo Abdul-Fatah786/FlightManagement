@@ -23,7 +23,10 @@
                 android:layout_height="32dp"
                 android:src="@drawable/ic_menu"
                 android:layout_alignParentStart="true"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Menu" />
 
             <TextView
                 android:id="@+id/passenger_name"
@@ -41,7 +44,10 @@
                 android:layout_height="32dp"
                 android:src="@drawable/ic_notification"
                 android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Notifications" />
         </RelativeLayout>
 
         <ScrollView
@@ -55,25 +61,78 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/search_box"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Search Flights..."
-                    android:drawableStart="@drawable/ic_search"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp"
+                    app:startIconDrawable="@drawable/ic_search"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+                    
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/search_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Search Flights..."
+                        android:focusable="true"
+                        android:clickable="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Quick Actions -->
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:columnCount="2"
+                    android:rowCount="2"
+                    android:alignmentMode="alignBounds"
                     android:layout_marginBottom="16dp">
                     
-                    <Button android:id="@+id/action_book_flight" android:text="Book Flight" android:layout_columnWeight="1"/>
-                    <Button android:id="@+id/action_my_bookings" android:text="My Bookings" android:layout_columnWeight="1"/>
-                    <Button android:id="@+id/action_check_in" android:text="Check-in" android:layout_columnWeight="1"/>
-                    <Button android:id="@+id/action_flight_status" android:text="Flight Status" android:layout_columnWeight="1"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/action_book_flight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Book Flight"
+                        android:drawableTop="@drawable/ic_flight"
+                        android:drawablePadding="8dp"
+                        android:padding="16dp"
+                        style="@style/Widget.Material3.Button.ElevatedButton"/>
+                    
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/action_my_bookings"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="My Bookings"
+                        android:drawableTop="@drawable/ic_schedule"
+                        android:drawablePadding="8dp"
+                        android:padding="16dp"
+                        style="@style/Widget.Material3.Button.ElevatedButton"/>
+                    
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/action_check_in"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Check-in"
+                        android:drawableTop="@drawable/ic_patients"
+                        android:drawablePadding="8dp"
+                        android:padding="16dp"
+                        style="@style/Widget.Material3.Button.ElevatedButton"/>
+                    
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/action_flight_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:text="Flight Status"
+                        android:drawableTop="@drawable/ic_notification"
+                        android:drawablePadding="8dp"
+                        android:padding="16dp"
+                        style="@style/Widget.Material3.Button.ElevatedButton"/>
                 </GridLayout>
 
                 <androidx.viewpager2.widget.ViewPager2

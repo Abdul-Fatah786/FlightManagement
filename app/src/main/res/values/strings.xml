@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Hospital Management</string>
-    <string name="we">Hospital Management</string>
-    <string name="headingSplashTwo">IMPROVE YOUR LIFESTYLE</string>
-    <string name="splashTwo">Striving to improve Interaction between doctors, patients, and hospital administrators</string>
+    <string name="app_name">Flight Management</string>
+    <string name="we">Flight Management</string>
+    <string name="headingSplashTwo">FLY WITH CONFIDENCE</string>
+    <string name="splashTwo">Streamlining flight bookings, passenger management, and travel experiences</string>
 </resources>
